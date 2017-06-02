@@ -3,14 +3,18 @@ from workshop_2 import User
 
 def test_user_save():
     user = User(
-        username='test',
+        username='xyz',
         email='test@email.com',
-        password='pass'
+        password='pyk'
     )
-
-    # a = user.save()
-    # assert a=='dodano do bazy'
-
-    loaded_user = User.load_by_email(email='test@email.com')
-    assert loaded_user.username == 'test'
-    assert loaded_user.email == 'test@email.com'
+    # user_2 = User(
+    #     username='abc',
+    #     email='test@wp.pl',
+    #     password='test'
+    # )
+    #
+    # user = user.load_by_email('test@email.com')
+    # user_2 = user_2.load_by_email(user_2.email)
+    # print(user.id, user_2.id)
+    # user_2.delete()
+    user.load_all()
