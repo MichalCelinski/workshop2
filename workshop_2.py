@@ -27,7 +27,6 @@ class User:
             data = list(row)
         cursor.close()
         db_connection.close()
-
         user = User(username=data[2], password=data[3], email=data[1])
         user.id = data[0]
         return user
